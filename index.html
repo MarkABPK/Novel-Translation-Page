@@ -5,23 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manga Website</title>
     <link rel="stylesheet" href="style.css" />
+     <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <div class="nav_container">
-        <nav>
-          <img class="logo" src="images/telegram.png"></img>
-          <a href="#Home">Home</a>
-          <a href="#Books">Books</a>
-          <a href="#Genre">Genre</a>
-          <div class="search-box">
-              <input type="text" placeholder="Search..." />
+      <nav class="nav-container">
+        <a href="#" class="logo">NOVEL-SITE</a>
+        <div class="search-bar">
+          <input type="text" placeholder="Search..." />
+        </div>
+        <ul class="nav-list">
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#Genres">Genres</a></li>
+          <li><a href="#Book">Books</a></li>
+          <div class="search-bar-vertical">
+            <input type="text" placeholder="Search..." />
           </div>
-          
-        </nav>
-      </div>
-      
-      <button class="signup_btn">Sign Up</button>
+          <div class="signup-btn-vertical">Sign Up</div>
+        </ul>
+        <div class="signup-btn">Sign Up</div>
+        <div class="bx bx-menu" id="menu-icon" onclick="myFunction()"></div>
+      </nav>
+    </header>
     </header>
 
     <section class="slider-container">
@@ -41,11 +53,11 @@
            </div>
     </section>
 
-    <div class="announce">Please Share the website with your friends!!!</div>
+   
 
    
 
-    <div class="popular-section">
+    <!-- <div class="popular-section">
       <div class="sub-title">Popular Right Now</div>
       <div class="popular-grid">
         <img src="images/cover2.jpg" alt="Popular Manga" />
@@ -112,7 +124,7 @@
         <a href="#terms">Terms and Conditions</a> |
         <a href="#contact">Contact</a>
         <p>&copy; 2025 Manga Reader. All Rights Reserved.</p>
-    </div>
+    </div> -->
     <script src="app.js"></script>
   </body>
 </html>
