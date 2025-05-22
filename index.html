@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manga Website</title>
     <link rel="stylesheet" href="style.css" />
-     <link
+    <link
       rel="stylesheet"
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
     />
@@ -17,11 +17,20 @@
   <body>
     <header>
       <nav class="nav-container">
-        <a href="#" class="logo">NOVEL-SITE</a>
+        <a href="#logo" class="logo">NOVEL-SITE</a>
         <div class="search-bar">
           <input type="text" placeholder="Search..." />
         </div>
         <ul class="nav-list">
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#Genres">Genres</a></li>
+          <li><a href="#Book">Books</a></li>
+          <div class="signup-btn">Sign Up</div>
+        </ul>
+        <ul class="nav-list-vertical" id="verticalMenu">
+          <div>
+            <span onclick="closeMenu()" class="close-btn">X</span>
+          </div>
           <li><a href="#Home">Home</a></li>
           <li><a href="#Genres">Genres</a></li>
           <li><a href="#Book">Books</a></li>
@@ -30,32 +39,28 @@
           </div>
           <div class="signup-btn-vertical">Sign Up</div>
         </ul>
-        <div class="signup-btn">Sign Up</div>
-        <div class="bx bx-menu" id="menu-icon" onclick="myFunction()"></div>
+
+        <!-- Menu icon -->
+        <div onclick="openMenu()" class="bx bx-menu" id="menu-icon"></div>
       </nav>
-    </header>
     </header>
 
     <section class="slider-container">
-           <div class="slider-wrapper">
-            <div class="slider">
-              <img id="slide1" src="images/slide1.jpg" alt="image1">
-              <img id="slide2" src="images/slide2.jpg" alt="image2">
-              <img id="slide3" src="images/slide3.jpg" alt="image3">
-              <img id="slide4" src="images/slide4.jpg" alt="image4">
-            </div>
-            <div class="slider-nav">
-              <a href="#slide1"></a>
-              <a href="#slide2"></a>
-              <a href="#slide3"></a>
-              <a href="#slide4"></a>
-            </div>
-           </div>
+      <div class="slider-wrapper">
+        <div class="slider">
+          <img id="slide1" src="images/slide1.jpg" alt="image1" />
+          <img id="slide2" src="images/slide2.jpg" alt="image2" />
+          <img id="slide3" src="images/slide3.jpg" alt="image3" />
+          <img id="slide4" src="images/slide4.jpg" alt="image4" />
+        </div>
+        <div class="slider-nav">
+          <a href="#slide1"></a>
+          <a href="#slide2"></a>
+          <a href="#slide3"></a>
+          <a href="#slide4"></a>
+        </div>
+      </div>
     </section>
-
-   
-
-   
 
     <!-- <div class="popular-section">
       <div class="sub-title">Popular Right Now</div>
@@ -125,6 +130,14 @@
         <a href="#contact">Contact</a>
         <p>&copy; 2025 Manga Reader. All Rights Reserved.</p>
     </div> -->
-    <script src="app.js"></script>
+    <script>
+      function openMenu() {
+        document.getElementById("verticalMenu").classList.add("show");
+      }
+
+      function closeMenu() {
+        document.getElementById("verticalMenu").classList.remove("show");
+      }
+    </script>
   </body>
 </html>

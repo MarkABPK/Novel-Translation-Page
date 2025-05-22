@@ -1,8 +1,7 @@
-let menu = document.querySelector("#menu-icon");
-function myFunction() {
-  document.getElementsByClassName(".nav-list").style.display = "block";
+function openMenu() {
+  document.getElementById("verticalMenu").classList.add("show");
 }
 
-menu.onclick = () => {
-  menu.classList.toggle("bx-x");
-};
+function closeMenu() {
+  document.getElementById("verticalMenu").classList.remove("show");
+}
